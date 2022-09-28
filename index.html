@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/f7cd449f1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="range-slider.js" defer></script>
+    <script src="app.js" defer></script>
+    <title>Shopix</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="mobile-header">
+        <div class="mob-header-items">
+          <div class="mob-header-item mob-header__logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <div class="mob-header__buttons">
+            <div class="mob-header-item mob-header__button">
+              <img src="images/icons/clue.svg" alt="" />
+            </div>
+            <div class="mob-header-item mob-header__button">
+              <img src="images/benchmark.svg" alt="" />
+            </div>
+            <div class="mob-header-item mob-header__button">
+              <img src="images/cart.svg" alt="" />
+            </div>
+          </div>
+          <div class="mob-header-item mob-header__burger">
+            <button class="burger origin">
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="line line3"></div>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <header class="main-header">
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <button href="#" id="login">
+              <div class="icon"><img src="images/md-log-in.svg" alt="" /></div>
+              <span> Příhlášení </span>
+            </button>
+            <div class="nav-line"></div>
+            <li class="main-nav__item home">
+              <div class="icon">
+                <img src="images/home-line.svg" alt="" />
+              </div>
+              <a href="#" id="home">Domů</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Kontakt</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">Prodejna</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Obchodní podmínky</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <nav class="search-nav">
+        <div class="search-nav__items">
+          <div class="search-nav__item" id="logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <input class="search-nav__item" type="text" />
+          <div class="search-nav__item">
+            <div id="compare">
+              <img src="images/benchmark.svg" alt="" />
+              <span>K porovnání</span>
+            </div>
+          </div>
+          <div class="search-nav__item">
+            <div id="cart">
+              <img src="images/cart.svg" alt="" />
+              <span>1297 Kč</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="main-section">
+        <nav class="side-nav">
+          <ul class="side-nav__items">
+            <li class="side-nav_item">JÍZDNÍ KOLA</li>
+            <li class="side-nav_item">ELEKTROKOLA</li>
+            <li class="side-nav_item">ELEKTROSADY</li>
+            <li class="side-nav_item">TŘÍKOLKY</li>
+            <li class="side-nav_item">KOMPONENTY</li>
+            <li class="side-nav_item">KOLA VT-BIKE</li>
+            <li class="side-nav_item">BAZAR</li>
+          </ul>
+        </nav>
+        <div class="content-container">
+          <h1>JÍZDNÍ KOLA</h1>
+          <form id="filter-form" class="filter-container" method="post">
+            <div class="filter-menu__items">
+              <div class="filter-menu__item brand-select">
+                <label for="brand-picker"><h2>VÝROBCE</h2></label>
+                <select name="brand" id="brand-picker">
+                  <option value="all">Jakýkoliv výrobce</option>
+                  <option value="ctm">CTM</option>
+                  <option value="cat">VT-BIKE</option>
+                  <option value="galaxy">GALAXY</option>
+                </select>
+              </div>
+
+              <div class="filter-menu__item slider">
+                <h2>CENOVÝ ROZSAH</h2>
+                <div class="range-slider-box">
+                  <div class="range-slider-values">
+                    <label for="min-value"
+                      ><span>OD</span>
+                      <input type="text" value="1000" id="min-value" />
+                      <span>Kč</span>
+                    </label>
+                    <label for="max-value"
+                      ><span>DO</span>
+                      <input id="max-value" type="text" value="50000" />
+                      <span>Kč</span>
+                    </label>
+                  </div>
+                  <div class="range-slider">
+                    <input
+                      class="range-slide rs-one"
+                      value="1000"
+                      min="1000"
+                      max="50000"
+                      step="500"
+                      type="range"
+                    />
+                    <input
+                      class="range-slide"
+                      value="50000"
+                      min="1000"
+                      max="50000"
+                      step="500"
+                      type="range"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="filter-menu__item size-picker">
+                <fieldset>
+                  <legend><h2>VELIKOST RÁMU</h2></legend>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="16"
+                      >16"
+                      <input type="checkbox" id="16" name="16" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="17"
+                      >17"
+                      <input type="checkbox" id="17" name="17" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="18"
+                      >18"
+                      <input type="checkbox" id="18" name="18" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="19"
+                      >19"
+                      <input type="checkbox" id="19" name="19" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="20"
+                      >20"
+                      <input type="checkbox" id="20" name="20" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="20.5"
+                      >20,5"
+                      <input type="checkbox" id="20.5" name="20.5" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="size-picker__item">
+                    <label class="size-picker__label" for="21"
+                      >21"
+                      <input type="checkbox" id="21" name="21" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="filter-menu__item">
+                <button class="primary-btn" id="filter-btn">POUŽÍT</button>
+              </div>
+            </div>
+          </form>
+          <div class="products"></div>
+        </div>
+      </div>
+    </div>
+    <div class="jump-up">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-copyright">
+          <span>&copy; 2021, bootiq.io</span>
+          <p>Všechna práva vyhrazena</p>
+        </div>
+        <div class="footer-logo">
+          <img src="images/logo_shopix_white.png" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

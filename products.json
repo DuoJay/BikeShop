@@ -1,0 +1,52 @@
+{
+  "bikes": [
+    {
+      "name": "CTM REIN 1.0 (27,5\") matná petrolejová / oranžová 19\"",
+      "picture": "images/products/CTM_REIN_1.0.png",
+      "price": "19 224",
+      "sleva": true,
+      "top": false,
+      "novinka": false
+    },
+    {
+      "name": "VT-BIKE SPYDER 24\" černá mat / zelená",
+      "picture": "images/products/VT-BIKE_SPYDER.png",
+      "price": "19 224",
+      "sleva": false,
+      "top": true,
+      "novinka": false
+    },
+    {
+      "name": "GALAXY EARLY BIRD 20\" ČERNÝ",
+      "picture": "images/products/GALAXY_EARLYBIRD.png",
+      "price": "19 224",
+      "sleva": false,
+      "top": false,
+      "novinka": true
+    },
+    {
+      "name": "GALAXY PYXIS 20\" ČERNÁ",
+      "picture": "images/products/GALAXY_PYXIS.png",
+      "price": "19 224",
+      "sleva": true,
+      "top": true,
+      "novinka": true
+    },
+    {
+      "name": "CTM REIN (27,5\") matná petrolejová / oranžová 19\"",
+      "picture": "images/products/CTM_REIN_PINK.png",
+      "price": "19 224",
+      "sleva": true,
+      "top": true,
+      "novinka": true
+    },
+    {
+      "name": "Dema TIGRA 3 SVĚTLÉ ŠEDÁ/ ČERVENÁ\"",
+      "picture": "images/products/DEMA_TIGRA.png",
+      "price": "19 224",
+      "sleva": true,
+      "top": true,
+      "novinka": true
+    }
+  ]
+}

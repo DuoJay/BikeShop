@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20.18" viewBox="0 0 24 20.18">
+  <g id="Group_78" data-name="Group 78" transform="translate(-1781 -18)">
+    <text id="_" data-name=" &gt;" transform="translate(1794 33)" fill="#707070" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0" xml:space="preserve"> &gt;</tspan></text>
+    <g id="phone" transform="translate(1766.25 13)">
+      <path id="Path_75" data-name="Path 75" d="M16.84,1.261H9.273A1.261,1.261,0,0,0,8.011,2.523V17.658a1.261,1.261,0,0,0,1.261,1.261H16.84A1.261,1.261,0,0,0,18.1,17.658V2.523A1.261,1.261,0,0,0,16.84,1.261ZM9.273,0A2.523,2.523,0,0,0,6.75,2.523V17.658A2.523,2.523,0,0,0,9.273,20.18H16.84a2.523,2.523,0,0,0,2.523-2.523V2.523A2.523,2.523,0,0,0,16.84,0Z" transform="translate(8 5)" fill="#707070" fill-rule="evenodd"/>
+      <path id="Path_76" data-name="Path 76" d="M16.934,29.368a1.184,1.184,0,1,0-1.184-1.184A1.184,1.184,0,0,0,16.934,29.368Z" transform="translate(4.122 -6.754)" fill="#707070" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
