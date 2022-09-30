@@ -1,3 +1,28 @@
+@mixin atSmall {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: 1008px) {
+    @content;
+  }
+}
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -15,10 +40,11 @@ html {
 body {
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-container {
-  padding-bottom: 7rem;
+  padding-bottom: 10rem;
 }
 
 .jump-up {

@@ -1,11 +1,14 @@
-@import '_variables.scss';
+@import 'base/typography.scss';
+@import 'base/_variables.scss';
+@import 'base/common-styles.scss';
 
-@import 'styles/common-styles.scss';
-@import 'styles/mobile-header.scss';
-@import 'styles/burger.scss';
-@import 'styles/main-header.scss';
-@import 'styles/search-navigation.scss';
-@import 'styles/main-section.scss';
-@import 'styles/product-filter.scss';
-@import 'styles/products.scss';
-@import 'styles/footer.scss';
+// BEM Blocks
+@import 'modules/mobile-header.scss';
+@import 'modules/burger.scss';
+@import 'modules/main-header.scss';
+@import 'modules/search-navigation.scss';
+@import 'modules/side-navbar.scss';
+@import 'modules/main-section.scss';
+@import 'modules/product-filter.scss';
+@import 'modules/products.scss';
+@import 'modules/footer.scss';

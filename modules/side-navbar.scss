@@ -1,0 +1,41 @@
+.side-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-top: 2rem;
+  height: 100vh;
+  width: 100%;
+  top: 5rem;
+  left: 0;
+  padding-top: 5rem;
+  z-index: 10;
+  background-color: map-get($colors, secondary);
+  @include atLarge {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 0;
+    width: 20rem;
+    background: none;
+    padding-top: 0;
+    top: 0;
+    transform: translateX(0);
+  }
+}
+.side-nav__items {
+  @include atLarge {
+    display: block;
+  }
+  font-size: 1.8rem;
+
+  li {
+    padding-bottom: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &::before {
+      content: '▸ ';
+    }
+  }
+}

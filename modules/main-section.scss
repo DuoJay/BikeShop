@@ -1,0 +1,39 @@
+.main-section {
+  color: map-get($colors, main);
+  font-family: map-get($fonts, main);
+  width: map-get($width, mobile);
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  width: 100vw;
+  @include atLarge {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-column-gap: 0px;
+    // grid-row-gap: 0px;
+  }
+}
+// MAIN CONTENT GENERAL STYLES
+
+.main-section-container {
+  display: flex;
+  width: map-get($width, desktop);
+}
+
+.content-container {
+  h1 {
+    font-size: 3.2rem;
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+  }
+
+  @include atLarge {
+    max-width: 60vw;
+    padding-left: 5rem;
+    h1 {
+      margin-top: 0;
+      text-align: start;
+    }
+  }
+}

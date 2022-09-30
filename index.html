@@ -90,132 +90,137 @@
         </div>
       </nav>
       <div class="main-section">
-        <nav class="side-nav">
-          <ul class="side-nav__items">
-            <li class="side-nav_item">JÍZDNÍ KOLA</li>
-            <li class="side-nav_item">ELEKTROKOLA</li>
-            <li class="side-nav_item">ELEKTROSADY</li>
-            <li class="side-nav_item">TŘÍKOLKY</li>
-            <li class="side-nav_item">KOMPONENTY</li>
-            <li class="side-nav_item">KOLA VT-BIKE</li>
-            <li class="side-nav_item">BAZAR</li>
-          </ul>
-        </nav>
-        <div class="content-container">
-          <h1>zobrazit kategorie</h1>
-          <h1>JÍZDNÍ KOLA</h1>
-          <form id="filter-form" class="filter-container" method="post">
-            <div class="filter-menu__items">
-              <div class="filter-menu__item brand-select">
-                <label for="brand-picker"><h2>VÝROBCE</h2></label>
-                <select name="brand" id="brand-picker">
-                  <option value="all">Jakýkoliv výrobce</option>
-                  <option value="ctm">CTM</option>
-                  <option value="cat">VT-BIKE</option>
-                  <option value="galaxy">GALAXY</option>
-                </select>
-              </div>
+        <div class="main-section-container">
+          <nav class="side-nav">
+            <ul class="side-nav__items">
+              <li class="side-nav_item">JÍZDNÍ KOLA</li>
+              <li class="side-nav_item">ELEKTROKOLA</li>
+              <li class="side-nav_item">ELEKTROSADY</li>
+              <li class="side-nav_item">TŘÍKOLKY</li>
+              <li class="side-nav_item">KOMPONENTY</li>
+              <li class="side-nav_item">KOLA VT-BIKE</li>
+              <li class="side-nav_item">BAZAR</li>
+            </ul>
+          </nav>
+          <div class="content-container">
+            <h1>JÍZDNÍ KOLA</h1>
+            <form id="filter-form" class="filter-container" method="post">
+              <div class="filter-menu__items">
+                <div class="filter-menu__item brand-select">
+                  <label for="brand-picker"><h2>VÝROBCE</h2></label>
+                  <select name="brand" id="brand-picker">
+                    <option value="all">Jakýkoliv výrobce</option>
+                    <option value="ctm">CTM</option>
+                    <option value="cat">VT-BIKE</option>
+                    <option value="galaxy">GALAXY</option>
+                  </select>
+                </div>
 
-              <div class="filter-menu__item slider">
-                <h2>CENOVÝ ROZSAH</h2>
-                <div class="range-slider-box">
-                  <div class="range-slider-values">
-                    <label for="min-value"
-                      ><span>OD</span>
-                      <input type="text" value="1000" id="min-value" />
-                      <span>Kč</span>
-                    </label>
-                    <label for="max-value"
-                      ><span>DO</span>
-                      <input id="max-value" type="text" value="50000" />
-                      <span>Kč</span>
-                    </label>
-                  </div>
-                  <div class="range-slider">
-                    <input
-                      class="range-slide rs-one"
-                      value="1000"
-                      min="1000"
-                      max="50000"
-                      step="500"
-                      type="range"
-                    />
-                    <input
-                      class="range-slide"
-                      value="50000"
-                      min="1000"
-                      max="50000"
-                      step="500"
-                      type="range"
-                    />
+                <div class="filter-menu__item slider">
+                  <h2>CENOVÝ ROZSAH</h2>
+                  <div class="range-slider-box">
+                    <div class="range-slider-values">
+                      <label for="min-value"
+                        ><span>OD</span>
+                        <input type="text" value="1000" id="min-value" />
+                        <span>Kč</span>
+                      </label>
+                      <label for="max-value"
+                        ><span>DO</span>
+                        <input id="max-value" type="text" value="50000" />
+                        <span>Kč</span>
+                      </label>
+                    </div>
+                    <div class="range-slider">
+                      <input
+                        class="range-slide rs-one"
+                        value="1000"
+                        min="1000"
+                        max="50000"
+                        step="500"
+                        type="range"
+                      />
+                      <input
+                        class="range-slide"
+                        value="50000"
+                        min="1000"
+                        max="50000"
+                        step="500"
+                        type="range"
+                      />
+                    </div>
                   </div>
                 </div>
+                <div class="filter-menu__item size-picker">
+                  <fieldset>
+                    <legend><h2>VELIKOST RÁMU</h2></legend>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="16"
+                        >16"
+                        <input type="checkbox" id="16" name="16" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="17"
+                        >17"
+                        <input type="checkbox" id="17" name="17" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="18"
+                        >18"
+                        <input type="checkbox" id="18" name="18" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="19"
+                        >19"
+                        <input type="checkbox" id="19" name="19" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="20"
+                        >20"
+                        <input type="checkbox" id="20" name="20" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="20.5"
+                        >20,5"
+                        <input type="checkbox" id="20.5" name="20.5" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="size-picker__item">
+                      <label class="size-picker__label" for="21"
+                        >21"
+                        <input type="checkbox" id="21" name="21" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-menu__item">
+                  <button class="primary-btn" id="filter-btn">POUŽÍT</button>
+                </div>
               </div>
-              <div class="filter-menu__item size-picker">
-                <fieldset>
-                  <legend><h2>VELIKOST RÁMU</h2></legend>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="16"
-                      >16"
-                      <input type="checkbox" id="16" name="16" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="17"
-                      >17"
-                      <input type="checkbox" id="17" name="17" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="18"
-                      >18"
-                      <input type="checkbox" id="18" name="18" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="19"
-                      >19"
-                      <input type="checkbox" id="19" name="19" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="20"
-                      >20"
-                      <input type="checkbox" id="20" name="20" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="20.5"
-                      >20,5"
-                      <input type="checkbox" id="20.5" name="20.5" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="size-picker__item">
-                    <label class="size-picker__label" for="21"
-                      >21"
-                      <input type="checkbox" id="21" name="21" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="filter-menu__item">
-                <button class="primary-btn" id="filter-btn">POUŽÍT</button>
-              </div>
+            </form>
+            <div class="products">
+              <!-- ***************************************
+              *****THIS IS WHERE THE PRODUCTS GO*****
+              *************************************** -->
             </div>
-          </form>
-          <div class="products"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="jump-up">
-      <i class="fa-solid fa-angles-up"></i>
+      <div class="jump-up">
+        <i class="fa-solid fa-angles-up"></i>
+      </div>
     </div>
     <footer>
       <div class="footer-content">

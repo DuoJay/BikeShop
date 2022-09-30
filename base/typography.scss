@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
-$colors: (
-  main: #262626,
-  secondary: #fff,
-  dark: #000,
-  light: #fbfbfb,
-  price: #ff0000,
-);
-
 $fonts: (
   main: (
     'Fira Sans',
@@ -18,9 +10,4 @@ $fonts: (
     'Roboto',
     sans-serif,
   ),
-);
-
-$width: (
-  mobile: 85vw,
-  desktop: 65vw,
 );

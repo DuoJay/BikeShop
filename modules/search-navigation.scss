@@ -1,6 +1,6 @@
 .search-nav {
   display: none;
-  @media (min-width: 60rem) {
+  @include atLarge {
     display: block;
     width: 100%;
   }
