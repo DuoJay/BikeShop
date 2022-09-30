@@ -3,10 +3,11 @@
   top: 7rem;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: map-get($fonts, secondary);
-  background-color: map-get($colors, main);
   font-size: 1.4rem;
+  background-color: map-get($colors, main);
+  // font-size: 1.4rem;
   padding: 1.4rem 0;
   z-index: 100;
 
@@ -29,26 +30,22 @@
     align-items: center;
 
     .icon {
-      font-size: inherit;
       height: 1.4rem;
+      padding-right: 1rem;
     }
 
     img {
-      padding-right: 1rem;
       height: 100%;
     }
   }
 
   #login {
     color: map-get($colors, secondary);
-    background-color: rgba(0, 0, 0, 0);
+    background: none;
     font-family: inherit;
     font-size: inherit;
     border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    cursor: pointer;
     @extend .center-icon;
   }
 
@@ -68,13 +65,14 @@
 
   @include atLarge {
     position: relative;
-    transform: translateX(0%);
     top: 0;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
+    transform: translateX(0%);
+
     nav {
       display: flex;
       flex-direction: row-reverse;

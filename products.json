@@ -30,7 +30,7 @@
       "price": "19 224",
       "sleva": true,
       "top": true,
-      "novinka": true
+      "novinka": false
     },
     {
       "name": "CTM REIN (27,5\") matná petrolejová / oranžová 19\"",
@@ -45,8 +45,8 @@
       "picture": "images/products/DEMA_TIGRA.png",
       "price": "19 224",
       "sleva": true,
-      "top": true,
-      "novinka": true
+      "top": false,
+      "novinka": false
     }
   ]
 }

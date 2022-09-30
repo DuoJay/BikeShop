@@ -3,6 +3,7 @@ const mobileNav = document.querySelector('.main-header');
 const navButton = document.querySelector('.burger');
 
 navButton.addEventListener('click', () => {
+  document.body.classList.toggle('toggle-overflow');
   mobileNav.classList.toggle('open-nav');
   navButton.classList.toggle('active');
   navButton.classList.toggle('origin');
@@ -35,7 +36,7 @@ const showProduts = async () => {
     </p>
     <div class="product-line"></div>
     <div class="product-cta">
-    <span class="product-price">${bike.price}</span>
+    <span class="product-price">${bike.price} Kč</span>
     <button class="primary-btn">KOUPIT</button>
     </div>
   `;
