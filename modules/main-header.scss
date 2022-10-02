@@ -7,7 +7,6 @@
   font-family: map-get($fonts, secondary);
   font-size: 1.4rem;
   background-color: map-get($colors, main);
-  // font-size: 1.4rem;
   padding: 1.4rem 0;
   z-index: 100;
 
@@ -22,42 +21,7 @@
   }
 
   li {
-    padding: 2rem 0;
-  }
-
-  .center-icon {
-    display: flex;
-    align-items: center;
-
-    .icon {
-      height: 1.4rem;
-      padding-right: 1rem;
-    }
-
-    img {
-      height: 100%;
-    }
-  }
-
-  #login {
-    color: map-get($colors, secondary);
-    background: none;
-    font-family: inherit;
-    font-size: inherit;
-    border: none;
-    cursor: pointer;
-    @extend .center-icon;
-  }
-
-  .home {
-    @extend .center-icon;
-  }
-
-  .nav-line {
-    height: 1px;
-    width: 100%;
-    background-color: map-get($colors, secondary);
-    margin: 2rem 0 2rem 0;
+    padding: 2rem 2rem 2rem 0;
   }
 
   transform: translateX(100%);
@@ -70,7 +34,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
     transform: translateX(0%);
 
     nav {
@@ -83,10 +46,6 @@
 
     .main-nav__items {
       display: flex;
-
-      .main-nav__item {
-        padding-right: 2rem;
-      }
     }
 
     .nav-line {
@@ -97,4 +56,43 @@
 
 .open-nav {
   transform: translateX(0%);
+}
+
+.center-icon {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    height: 1.4rem;
+    padding-right: 1rem;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.login {
+  height: 100%;
+  margin: auto 0;
+  button {
+    color: map-get($colors, secondary);
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    @extend .center-icon;
+  }
+}
+
+.home {
+  @extend .center-icon;
+}
+
+.nav-line {
+  height: 1px;
+  width: 100%;
+  background-color: map-get($colors, secondary);
+  margin: 2rem 0 2rem 0;
 }

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <script
       src="https://kit.fontawesome.com/f7cd449f1a.js"
@@ -15,6 +21,13 @@
     <title>Shopix</title>
   </head>
   <body>
+    <div class="backdrop"></div>
+    <div class="modal">
+      <input type="text" placeholder="email" />
+      <input type="password" placeholder="heslo" />
+      <button class="primary-btn">PŘIHLÁSIT SE</button>
+      <div><span>Nemáte ještě účet?</span> <a href="#">Registrovat se</a></div>
+    </div>
     <div class="page-container">
       <header class="mobile-header">
         <div class="mob-header-items">
@@ -44,10 +57,12 @@
 
       <header class="main-header">
         <nav class="main-nav">
-          <button href="#" id="login">
-            <div class="icon"><img src="images/md-log-in.svg" alt="" /></div>
-            <span>Příhlášení</span>
-          </button>
+          <div class="login">
+            <button href="#">
+              <div class="icon"><img src="images/md-log-in.svg" alt="" /></div>
+              <span>Příhlášení</span>
+            </button>
+          </div>
           <div class="nav-line"></div>
           <ul class="main-nav__items">
             <li class="main-nav__item home">

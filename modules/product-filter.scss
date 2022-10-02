@@ -237,22 +237,6 @@
 // END SIZE PICKER
 
 // FORM BUTTON
-.primary-btn {
-  cursor: pointer;
-  width: 10rem;
-  height: 4.5rem;
-  color: map-get($colors, secondary);
-  background-color: map-get($colors, dark);
-  border: none;
-
-  &:hover {
-    transform: scale(102%);
-  }
-
-  &:active {
-    transform: scale(100%);
-  }
-}
 
 #filter-btn {
   width: 100%;

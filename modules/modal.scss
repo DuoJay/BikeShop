@@ -1,0 +1,71 @@
+.backdrop {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  transition: opacity 500ms linear;
+}
+
+.modal {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  width: 70%;
+  height: 300px;
+  background-color: map-get($colors, secondary);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 150;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid map-get($colors, main);
+  padding: 2rem;
+  padding-bottom: 3rem;
+  font-size: 1.4rem;
+  transition: opacity 0.3s linear, transform 0.3s ease-in;
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    font-family: map-get($fonts, main);
+    border: 1px solid map-get($colors, main);
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space;
+    span {
+      color: map-get($colors, main);
+      font-family: map-get($fonts, sans);
+      padding-bottom: 1rem;
+    }
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  @include atLarge {
+    width: 250px;
+    top: 4.5rem;
+    right: 10rem;
+    transform: translate(0, calc(-100% - 5rem));
+  }
+}
+
+.open {
+  display: flex;
+}

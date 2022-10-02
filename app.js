@@ -1,13 +1,71 @@
 const mobileNav = document.querySelector('.main-header');
-
 const navButton = document.querySelector('.burger');
+const backdrop = document.querySelector('.backdrop');
+const loginModal = document.querySelector('.modal');
+const loginBtn = document.querySelector('.login');
 
-navButton.addEventListener('click', () => {
+let clientWidth = document.documentElement.clientWidth;
+const desktopMode = 991;
+// COMMON FUNCTIONS
+const toggleOverflow = () => {
   document.body.classList.toggle('toggle-overflow');
+};
+
+const toggleMobileNav = () => {
   mobileNav.classList.toggle('open-nav');
   navButton.classList.toggle('active');
   navButton.classList.toggle('origin');
+};
+// END OF COMMON FUNCTIONS
+// TOGGLE MODAL
+const openModal = () => {
+  backdrop.classList.toggle('open');
+  loginModal.classList.toggle('open');
+  setTimeout(() => {
+    backdrop.style.opacity = '1';
+    loginModal.style.opacity = '1';
+
+    if (clientWidth >= desktopMode) {
+      loginModal.style.transform = 'translate(0,0)';
+    }
+  });
+};
+
+const closeModal = () => {
+  let clientWidth = document.documentElement.clientWidth;
+  console.log(clientWidth);
+  backdrop.style.opacity = '0';
+  loginModal.style.opacity = '0';
+
+  if (clientWidth >= desktopMode) {
+    loginModal.style.transform = 'translate(0, calc(-100% - 5rem))';
+    console.log(22);
+  }
+  setTimeout(() => {
+    backdrop.classList.toggle('open');
+    loginModal.classList.toggle('open');
+  }, 300);
+};
+
+loginBtn.addEventListener('click', () => {
+  toggleOverflow();
+  openModal();
 });
+
+backdrop.addEventListener('click', () => {
+  toggleOverflow();
+  closeModal();
+});
+
+// END OF TOGGLE MODAL
+// TOGGLE MOBILE NAV BAR
+
+navButton.addEventListener('click', () => {
+  toggleOverflow();
+  toggleMobileNav();
+});
+// END OF TOGGLE MOBILE NAV BAR
+// LOAD PRODUCTS ON PAGE
 
 const fetchProducts = async url => {
   const { data } = await axios.get(url);
@@ -46,6 +104,7 @@ const showProduts = async () => {
 
 showProduts();
 
+// ENDO OF LOAD PRODUCTS
 // JUMP UP BUTTON FOR MOBILES
 const jumpUp = document.querySelector('.jump-up');
 
@@ -58,3 +117,5 @@ document.addEventListener('scroll', e => {
 });
 
 jumpUp.addEventListener('click', () => window.scrollTo(0, 0));
+
+// END OF JUMPUP BUTTONS
