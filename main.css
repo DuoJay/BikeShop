@@ -81,6 +81,11 @@ a {
   background: rgba(255, 255, 255, 0.8);
   transition: opacity 500ms linear;
 }
+@media (min-width: 1008px) {
+  .backdrop {
+    opacity: 0 !important;
+  }
+}
 
 .modal {
   display: none;
