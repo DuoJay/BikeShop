@@ -11,7 +11,7 @@
 }
 
 .search-nav__items {
-  display: flex;
+  @include display-flex();
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

@@ -10,7 +10,7 @@
   position: relative;
   width: 240px;
   height: 350px;
-  display: flex;
+  @include display-flex();
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
 
 .badge-container {
   position: absolute;
-  display: flex;
+  @include display-flex();
   flex-direction: column;
   justify-content: flex-start;
   top: 1rem;
@@ -85,7 +85,7 @@
 }
 
 .product-cta {
-  display: flex;
+  @include display-flex();
   justify-content: space-between;
   align-items: center;
   width: 100%;

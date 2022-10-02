@@ -2,7 +2,7 @@
   color: map-get($colors, main);
   font-family: map-get($fonts, main);
   width: map-get($width, mobile);
-  display: flex;
+  @include display-flex();
   justify-content: center;
   padding-top: 12rem;
   width: auto;
@@ -13,7 +13,7 @@
 // MAIN CONTENT GENERAL STYLES
 
 .main-section-container {
-  display: flex;
+  @include display-flex();
   flex-direction: column;
   justify-content: space-between;
   width: map-get($width, mobile);
@@ -24,7 +24,7 @@
 }
 
 .content-container {
-  display: flex;
+  @include display-flex();
   flex-direction: column;
   justify-content: center;
   align-items: center;

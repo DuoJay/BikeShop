@@ -1,10 +1,11 @@
 .side-nav {
   width: map-get($width, mobile);
   padding-bottom: 40px;
+
   @include atLarge {
-    display: flex;
+    @include display-flex();
     align-items: flex-start;
-    flex-basis: 220px;
+    flex-basis: 300px;
     position: relative;
     width: 20rem;
     background: none;

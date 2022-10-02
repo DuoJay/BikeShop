@@ -13,7 +13,7 @@
 }
 
 .filter-menu__items {
-  display: flex;
+  @include display-flex();
   flex-direction: column;
   justify-content: center;
   @include filterAtLarge {
@@ -60,7 +60,7 @@
   }
 
   .range-slider-values {
-    display: flex;
+    @include display-flex();
     flex-direction: column;
     align-items: center;
 
@@ -70,7 +70,7 @@
   }
 
   label {
-    display: flex;
+    @include display-flex();
     margin-bottom: 1rem;
     justify-content: center;
     width: 100%;
@@ -178,7 +178,7 @@
   fieldset {
     margin-top: 1rem;
     border: none;
-    display: flex;
+    @include display-flex();
     flex-wrap: wrap;
     justify-content: center;
     @media (min-width: 82rem) {
@@ -213,11 +213,10 @@
         cursor: pointer;
         height: 0;
         width: 0;
-      }
 
-      .size-picker__label:hover input ~ .checkmark::after,
-      .size-picker__label input:checked ~ .checkmark::after {
-        opacity: 1;
+        &:checked ~ .checkmark::after {
+          opacity: 1;
+        }
       }
 
       .checkmark {

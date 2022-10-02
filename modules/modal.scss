@@ -47,7 +47,7 @@
     width: 100%;
   }
   div {
-    display: flex;
+    @include display-flex();
     flex-direction: column;
     align-items: center;
     justify-content: space;
@@ -71,7 +71,7 @@
 }
 
 .open-modal {
-  display: flex;
+  @include display-flex();
   opacity: 1;
   @include atMedium {
     transform: translate(0, 0);

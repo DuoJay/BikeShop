@@ -31,13 +31,13 @@
     position: relative;
     top: 0;
     height: 5rem;
-    display: flex;
+    @include display-flex();
     justify-content: center;
     align-items: center;
     transform: translateX(0%);
 
     nav {
-      display: flex;
+      @include display-flex();
       flex-direction: row-reverse;
       justify-content: space-between;
       padding: 0;
@@ -45,7 +45,7 @@
     }
 
     .main-nav__items {
-      display: flex;
+      @include display-flex();
     }
 
     .nav-line {
@@ -59,7 +59,7 @@
 }
 
 .center-icon {
-  display: flex;
+  @include display-flex();
   align-items: center;
 
   .icon {
