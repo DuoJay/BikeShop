@@ -4,15 +4,23 @@
   width: map-get($width, mobile);
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 12rem;
   width: auto;
+  @include atMedium {
+    padding-top: 5rem;
+  }
 }
 // MAIN CONTENT GENERAL STYLES
 
 .main-section-container {
   display: flex;
-  justify-content: center;
-  width: map-get($width, desktop);
+  flex-direction: column;
+  justify-content: space-between;
+  width: map-get($width, mobile);
+  @include atLarge {
+    width: map-get($width, desktop);
+    flex-direction: row;
+  }
 }
 
 .content-container {
@@ -20,17 +28,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-basis: 100%;
   h1 {
     width: 100%;
     font-size: 3.2rem;
-    margin: 5rem 0 2rem 0;
+    margin-bottom: 2rem;
     text-align: center;
   }
 
-  @include atLarge {
+  @include filterAtLarge {
     width: 100%;
     h1 {
-      margin-top: 0;
       text-align: start;
     }
   }

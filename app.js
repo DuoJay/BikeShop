@@ -45,6 +45,22 @@ backdrop.addEventListener('click', () => {
 });
 
 // END OF TOGGLE MODAL
+// SHOW CATEGORIES
+const showCategories = () => {
+  const ctgBtn = document.querySelector('#show-categories');
+  const categories = document.querySelector('.side-nav__items');
+
+  ctgBtn.addEventListener('click', e => {
+    e.preventDefault();
+    categories.classList.toggle('show-categories');
+    ctgBtn.classList.toggle('rotate-arrow');
+  });
+};
+
+showCategories();
+
+// END OF SHOW CATEGORIES
+
 // TOGGLE MOBILE NAV BAR
 
 navButton.addEventListener('click', () => {
