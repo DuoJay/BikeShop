@@ -130,7 +130,7 @@ a {
   .modal {
     width: 250px;
     top: 4.5rem;
-    right: 10rem;
+    right: 15vw;
     transform: translate(0, calc(-100% - 5rem));
   }
 }
@@ -390,6 +390,7 @@ a {
 }
 
 .login {
+  position: relative;
   height: 100%;
   margin: auto 0;
 }

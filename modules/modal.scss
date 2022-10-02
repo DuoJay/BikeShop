@@ -61,7 +61,7 @@
   @include atLarge {
     width: 250px;
     top: 4.5rem;
-    right: 10rem;
+    right: calc((100vw - map-get($width, desktop)) / 2);
     transform: translate(0, calc(-100% - 5rem));
   }
 }
