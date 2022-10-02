@@ -4,8 +4,6 @@ const backdrop = document.querySelector('.backdrop');
 const loginModal = document.querySelector('.modal');
 const loginBtn = document.querySelector('.login');
 
-let clientWidth = document.documentElement.clientWidth;
-const desktopMode = 991;
 // COMMON FUNCTIONS
 const toggleOverflow = () => {
   document.body.classList.toggle('toggle-overflow');
@@ -19,31 +17,20 @@ const toggleMobileNav = () => {
 // END OF COMMON FUNCTIONS
 // TOGGLE MODAL
 const openModal = () => {
-  backdrop.classList.toggle('open');
-  loginModal.classList.toggle('open');
+  backdrop.style.display = 'initial';
+  loginModal.style.display = 'flex';
   setTimeout(() => {
-    backdrop.style.opacity = '1';
-    loginModal.style.opacity = '1';
-
-    if (clientWidth >= desktopMode) {
-      loginModal.style.transform = 'translate(0,0)';
-    }
-  });
+    backdrop.classList.add('open-modal');
+    loginModal.classList.add('open-modal');
+  }, 1);
 };
 
 const closeModal = () => {
-  let clientWidth = document.documentElement.clientWidth;
-  console.log(clientWidth);
-  backdrop.style.opacity = '0';
-  loginModal.style.opacity = '0';
-
-  if (clientWidth >= desktopMode) {
-    loginModal.style.transform = 'translate(0, calc(-100% - 5rem))';
-    console.log(22);
-  }
+  backdrop.classList.remove('open-modal');
+  loginModal.classList.remove('open-modal');
   setTimeout(() => {
-    backdrop.classList.toggle('open');
-    loginModal.classList.toggle('open');
+    backdrop.style.display = 'none';
+    loginModal.style.display = 'none';
   }, 300);
 };
 

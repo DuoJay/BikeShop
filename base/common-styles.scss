@@ -5,7 +5,7 @@
 }
 
 @mixin atMedium {
-  @media (min-width: 641px) {
+  @media (min-width: 920px) {
     @content;
   }
 }
@@ -16,7 +16,8 @@
   }
 }
 
-@mixin filterFix {
+// TO FIX THE ELEMENTS LAYOUT IN FILTER CONTAINER
+@mixin filterAtLarge {
   @media (min-width: 1300px) {
     @content;
   }

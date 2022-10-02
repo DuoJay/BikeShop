@@ -10,7 +10,7 @@
   background: rgba(255, 255, 255, 0.8);
   transition: opacity 500ms linear;
 
-  @include atLarge {
+  @include atMedium {
     opacity: 0 !important;
   }
 }
@@ -62,7 +62,7 @@
     }
   }
 
-  @include atLarge {
+  @include atMedium {
     width: 250px;
     top: 4.5rem;
     right: calc((100vw - map-get($width, desktop)) / 2);
@@ -70,6 +70,10 @@
   }
 }
 
-.open {
+.open-modal {
   display: flex;
+  opacity: 1;
+  @include atMedium {
+    transform: translate(0, 0);
+  }
 }
