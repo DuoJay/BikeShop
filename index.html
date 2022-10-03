@@ -69,7 +69,7 @@
               <div class="icon">
                 <img src="images/home-line.svg" alt="" />
               </div>
-              <a href="#" id="home">Domů</a>
+              <a href="#" id="home" name="domů">Domů</a>
             </li>
             <li class="main-nav__item">
               <a href="#">Kontakt</a>
@@ -138,14 +138,24 @@
                 <div class="filter-menu__item slider">
                   <h2>CENOVÝ ROZSAH</h2>
                   <div class="range-slider-box">
-                    <label for="min-value"
+                    <label for="min-value" class="min-value"
                       ><span>OD</span>
-                      <input type="text" value="1000" id="min-value" />
+                      <input
+                        id="min-value"
+                        type="number"
+                        value="1000"
+                        disabled
+                      />
                       <span>Kč</span>
                     </label>
-                    <label for="max-value"
+                    <label for="max-value" class="max-value"
                       ><span>DO</span>
-                      <input id="max-value" type="text" value="50000" />
+                      <input
+                        id="max-value"
+                        type="number"
+                        value="50000"
+                        disabled
+                      />
                       <span>Kč</span>
                     </label>
                     <div class="range-slider">
