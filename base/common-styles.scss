@@ -85,20 +85,3 @@ select {
     transform: scale(100%);
   }
 }
-
-.jump-up {
-  text-align: center;
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
-  font-size: 3rem;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-  @media (min-width: 50rem) {
-    font-size: 5rem;
-  }
-  @media (min-width: 60rem) {
-    display: none;
-  }
-  z-index: 99;
-}

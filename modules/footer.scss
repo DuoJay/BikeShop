@@ -20,6 +20,5 @@ footer {
   @include atMedium {
     width: map-get($width, desktop);
     justify-content: space-between;
-    margin: auto;
   }
 }

@@ -1,13 +1,20 @@
 .search-nav {
   @include display-flex;
+  font-family: map-get($fonts, secondary);
+  background-color: map-get($colors, secondary);
+  position: sticky;
+  top: 0;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 10rem;
-  font-family: map-get($fonts, secondary);
   padding: 2rem;
   box-shadow: 0px 5px 15px rgba(10, 10, 10, 0.1);
   font-size: 1.6rem;
+  z-index: 100;
+  @include atMedium {
+    top: 50px;
+  }
 }
 
 .search-nav__items {
