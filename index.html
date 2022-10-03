@@ -21,6 +21,7 @@
     <title>Shopix</title>
   </head>
   <body>
+    <!-- MODAL SECTION -->
     <div class="backdrop"></div>
     <div class="modal">
       <input type="text" placeholder="email" />
@@ -28,7 +29,9 @@
       <button class="primary-btn">PŘIHLÁSIT SE</button>
       <div><span>Nemáte ještě účet?</span> <a href="#">Registrovat se</a></div>
     </div>
+    <!-- END OF MODAL SECTION -->
     <div class="page-container">
+      <!-- HEADER SECTIONS -->
       <header class="mobile-header">
         <div class="mob-header-items">
           <div class="mob-header-item mob-header__logo">
@@ -83,7 +86,8 @@
           </ul>
         </nav>
       </header>
-
+      <!-- END OF HEADER SECTION -->
+      <!-- SEARCH NAV SECTION -->
       <nav class="search-nav">
         <div class="search-nav__items">
           <div class="search-nav__item" id="logo">
@@ -106,8 +110,11 @@
           </div>
         </div>
       </nav>
+      <!-- END OF SEARCH NAV SECTION -->
+      <!-- MAIN SECTION -->
       <div class="main-section">
         <div class="main-section-container">
+          <!-- SIDE NAV SECTION -->
           <nav class="side-nav">
             <div class="toggle-categories">
               <button id="show-categories">Zobrazit kategorie</button>
@@ -123,6 +130,8 @@
             </ul>
           </nav>
           <div class="content-container">
+            <!-- END OF SIDE NAV SECTION -->
+            <!-- FILTER FORM SECTION -->
             <h1>JÍZDNÍ KOLA</h1>
             <form id="filter-form" class="filter-container" method="post">
               <div class="filter-menu__items">
@@ -237,7 +246,20 @@
                 </div>
               </div>
             </form>
+            <!-- END OF FILTER FORM SECTION -->
+            <!-- PRODUCT CONTAINER -->
             <div class="products"></div>
+            <!-- END OF PRODUCT CONTAINER -->
+            <div class="page-select">
+              <ol class="page-numbers">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ol>
+              <button>další >></button>
+            </div>
           </div>
         </div>
       </div>
@@ -245,6 +267,7 @@
         <i class="fa-solid fa-angles-up"></i>
       </div>
     </div>
+    <!-- FOOTER SECTION -->
     <footer>
       <div class="footer-content">
         <div class="footer-copyright">
@@ -256,5 +279,6 @@
         </div>
       </div>
     </footer>
+    <!-- END OF FOOTER SECTION -->
   </body>
 </html>

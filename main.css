@@ -35,7 +35,7 @@ select {
 }
 
 .page-container {
-  padding-bottom: 10rem;
+  padding-bottom: 13rem;
 }
 
 .primary-btn {
@@ -963,10 +963,13 @@ select {
 
 .products {
   margin-top: 4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 5rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-gap: 1rem;
+  border-bottom: 2px solid #707070;
 }
 
 .product-container {
@@ -1071,6 +1074,42 @@ select {
   font-size: 2.2rem;
   font-weight: bold;
   color: #ff0000;
+}
+
+.page-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-self: flex-end;
+}
+.page-select ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.page-select ol li {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1px;
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.page-select ol li:hover, .page-select ol li:active {
+  border: 1px solid black;
+}
+.page-select ol .active {
+  border: 1px solid black;
+}
+.page-select button {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 footer {
