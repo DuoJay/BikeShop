@@ -692,7 +692,7 @@ select {
   text-align: center;
 }
 .brand-select select {
-  color: red;
+  color: #262626;
   background-color: #fff;
   border: 1px solid;
   text-align: center;
@@ -754,15 +754,25 @@ select {
   }
 }
 .slider label input {
+  -moz-appearance: textfield;
+  color: #262626;
+  background-color: white;
+  border: 1px solid #262626;
+  -webkit-appearance: none;
   text-align: center;
   font-size: 1.6rem;
   padding: 0.5rem;
   height: 5rem;
 }
 .slider label input:disabled {
-  color: black;
+  -moz-appearance: textfield;
+  color: #262626;
   background-color: white;
   border: 1px solid #262626;
+}
+.slider label input::-webkit-outer-spin-button, .slider label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 @media (min-width: 1300px) {
   .slider label input {

@@ -35,7 +35,7 @@
   }
 
   select {
-    color: red;
+    color: #262626;
     background-color: map-get($colors, secondary);
     border: 1px solid map-get($colors, primary);
     text-align: center;
@@ -90,15 +90,29 @@
     }
 
     input {
+      -moz-appearance: textfield;
+      color: #262626;
+      background-color: white;
+      border: 1px solid #262626;
+      -webkit-appearance: none;
       text-align: center;
       font-size: 1.6rem;
       padding: 0.5rem;
       height: 5rem;
+
       &:disabled {
-        color: black;
+        -moz-appearance: textfield;
+        color: #262626;
         background-color: white;
-        border: 1px solid map-get($colors, main);
+        border: 1px solid #262626;
       }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
       @include filterAtLarge {
         width: 100px;
       }
