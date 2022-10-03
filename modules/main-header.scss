@@ -1,6 +1,6 @@
 .main-header {
   position: fixed;
-  top: 7rem;
+  top: 10rem;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -11,7 +11,18 @@
   z-index: 100;
 
   nav {
+    @include display-flex();
+    width: map-get($width, mobile);
+    flex-direction: column;
     padding: 2rem 4rem;
+    @include atMedium {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 0;
+    }
+    @include atLarge {
+      width: map-get($width, desktop);
+    }
   }
 
   a {
@@ -35,14 +46,6 @@
     justify-content: center;
     align-items: center;
     transform: translateX(0%);
-
-    nav {
-      @include display-flex();
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      padding: 0;
-      width: map-get($width, desktop);
-    }
 
     .main-nav__items {
       @include display-flex();

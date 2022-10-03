@@ -1,20 +1,22 @@
 footer {
+  background-color: map-get($colors, dark);
+  font-family: map-get($fonts, main);
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 7rem;
-  background-color: map-get($colors, dark);
-  font-family: map-get($fonts, main);
   font-size: 1.4rem;
   color: white;
 }
 
 .footer-content {
-  height: 100%;
   @include display-flex();
-  justify-content: space-evenly;
+  width: map-get($width, mobile);
+  margin: auto;
+  height: 100%;
+  justify-content: space-between;
   align-items: center;
-  @include atLarge {
+  @include atMedium {
     width: map-get($width, desktop);
     justify-content: space-between;
     margin: auto;
