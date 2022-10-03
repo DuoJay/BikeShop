@@ -35,9 +35,9 @@
       <header class="main-header">
         <nav class="main-nav">
           <div class="login">
-            <button href="#">
+            <button href="#"  aria-label="přihlášení">
               <div class="icon"><img src="images/md-log-in.svg" alt="" /></div>
-              <span>Příhlášení</span>
+              <span>Přihlášení</span>
             </button>
           </div>
           <div class="nav-line"></div>
@@ -68,29 +68,30 @@
             <img src="images/logo.svg" alt="" />
           </div>
           <div class="search-nav__item search-bar">
-            <input type="text" />
+            <input type="text"   aria-label="vyhledat"/>
           </div>
-          <div class="search-nav__item search-clue search-icon">
-            <div><img src="images/icons/clue.svg" alt=""></div>
+          <div class="search-nav__item search-clue search-icon" aria-label="vyhledat">
+            <div><img src="images/icons/clue.svg" alt="" />
           </div>
-          <div class="search-nav__item compare search-icon">
-            <div>
-              <img src="images/benchmark.svg" alt="" />
-              <span>K porovnání</span>
-            </div>
+        </div>
+        <div class="search-nav__item compare search-icon"  aria-label="k porovnání">
+          <div aria-label="k porovnání">
+            <img src="images/benchmark.svg" alt="" />
+            <span>K porovnání</span>
           </div>
-          <div class="search-nav__item cart search-icon">
-            <div>
-              <img src="images/cart.svg" alt="" />
-              <span>1297 Kč</span>
-            </div>
+        </div>
+        <div class="search-nav__item cart search-icon"  >
+          <div>
+            <img src="images/cart.svg" alt="" aria-label="košík"/>
+            <span aria-label="k zaplacení">1297 Kč</span>
           </div>
-          <div class="search-nav__item search-nav__burger">
-            <button class="burger origin">
-              <div class="line line1"></div>
-              <div class="line line2"></div>
-              <div class="line line3"></div>
-            </button>
+        </div>
+        <div class="search-nav__item search-nav__burger">
+          <button class="burger origin" aria-label="hlavní nabídka">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </button>
         </div>
       </nav>
       <!-- END OF SEARCH NAV SECTION -->
@@ -116,7 +117,7 @@
             <!-- END OF SIDE NAV SECTION -->
             <!-- FILTER FORM SECTION -->
             <h1>JÍZDNÍ KOLA</h1>
-            <form id="filter-form" class="filter-container" method="post">
+            <form id="filter-form" class="filter-container" method="post"  >
               <div class="filter-menu__items">
                 <div class="filter-menu__item brand-select">
                   <label for="brand-picker"><h2>VÝROBCE</h2></label>
@@ -131,7 +132,7 @@
                   <h2>CENOVÝ ROZSAH</h2>
                   <div class="range-slider-box">
                     <label for="min-value" class="min-value"
-                      ><span>OD</span>
+                    aria-label="minimální hodnota"><span>OD</span>
                       <input
                         id="min-value"
                         type="number"
@@ -141,7 +142,7 @@
                       <span>Kč</span>
                     </label>
                     <label for="max-value" class="max-value"
-                      ><span>DO</span>
+                    aria-label="maximální hodnota"><span>DO</span>
                       <input
                         id="max-value"
                         type="number"
@@ -225,7 +226,7 @@
                   </fieldset>
                 </div>
                 <div class="filter-menu__item">
-                  <button class="primary-btn" id="filter-btn">POUŽÍT</button>
+                  <button class="primary-btn" id="filter-btn" aria-label="potvrdit výběr">POUŽÍT</button>
                 </div>
               </div>
             </form>

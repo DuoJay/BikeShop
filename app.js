@@ -39,13 +39,13 @@ const showProduts = async () => {
     <div class="product-image">
     <img src="${bike.picture}" alt="" />
     </div>
-    <p class="product-name">
+    <p class="product-name" id="bike-name">
     ${bike.name}"
     </p>
     <div class="product-line"></div>
     <div class="product-cta">
     <span class="product-price">${bike.price} Kč</span>
-    <button class="primary-btn">KOUPIT</button>
+    <button class="primary-btn" aria-label="koupit ${bike.name}">KOUPIT</button>
     </div>
   `;
     productsContainer.appendChild(product);

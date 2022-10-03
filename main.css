@@ -56,7 +56,7 @@ select {
 .jump-up {
   text-align: center;
   position: fixed;
-  right: 10px;
+  left: 10px;
   bottom: 10px;
   font-size: 3rem;
   opacity: 0;
@@ -526,7 +526,7 @@ select {
   height: 50px;
 }
 .compare::before {
-  content: "5";
+  content: "5"/"";
   position: absolute;
   left: 25px;
   top: -5px;
@@ -553,7 +553,7 @@ select {
   height: 50px;
 }
 .cart::before {
-  content: "3";
+  content: "3"/"";
   position: absolute;
   left: 25px;
   top: -5px;
@@ -615,7 +615,7 @@ select {
   color: #262626;
 }
 .toggle-categories button::after {
-  content: "▸";
+  content: "▸"/"";
   display: inline-block;
   font-size: 2.5rem;
 }
@@ -1191,6 +1191,7 @@ footer {
   height: 7rem;
   font-size: 1.4rem;
   color: white;
+  z-index: 100;
 }
 
 .footer-content {

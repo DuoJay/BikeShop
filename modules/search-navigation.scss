@@ -95,7 +95,7 @@
 
   position: relative;
   &::before {
-    content: '5';
+    content: '5' / '';
     @include icon-count-badge;
   }
   span {
@@ -116,7 +116,7 @@
 
   position: relative;
   &::before {
-    content: '3';
+    content: '3' / '';
     @include icon-count-badge;
   }
   span {
