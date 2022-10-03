@@ -1,5 +1,5 @@
 .filter-container {
-  padding: 2rem;
+  padding: 0 3rem 3rem 3rem;
   border: 1px solid black;
   background-color: map-get($colors, light);
   width: 100%;
@@ -21,11 +21,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+}
 
-  .filter-menu__item {
-    position: relative;
-    padding: 1rem 0 1rem 0;
-  }
+.filter-menu__item {
+  padding-top: 3rem;
+  position: relative;
 }
 
 // BRAND SELECTOR
@@ -35,12 +35,13 @@
   }
 
   select {
+    color: map-get($colors, primary);
+    background-color: map-get($colors, secondary);
+    border: 1px solid map-get($colors, primary);
     text-align: center;
     width: 100%;
     height: 5rem;
-    border: 1px solid map-get($colors, primary);
     padding: 1rem 0;
-    background-color: map-get($colors, secondary);
   }
 
   @include filterAtLarge {
@@ -91,7 +92,7 @@
     input {
       text-align: center;
       font-size: 1.6rem;
-      padding: 1rem 0;
+      padding: 0.5rem;
       height: 5rem;
       &:disabled {
         color: black;
@@ -112,7 +113,6 @@
 
   .max-value {
     @include filterAtLarge {
-      // justify-content: flex-start;
       order: 3;
     }
   }
@@ -124,12 +124,16 @@
       transform: translateY(-10%);
       order: 2;
     }
+
     input[type='range'] {
       -webkit-appearance: none;
       width: 100%;
       position: relative;
+      height: 1px;
       left: 0;
       top: 2.5rem;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       &:nth-of-type(2) {
         top: 1.3rem !important;
@@ -137,18 +141,26 @@
         &::before {
           content: '';
           position: absolute;
-          width: 1px;
+          width: 2px;
           height: 25px;
+          top: 0;
+          left: 0;
           background-color: #000;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
         }
+
         &::after {
           content: '';
           position: absolute;
-          width: 1px;
+          width: 2px;
           height: 25px;
+          top: 0;
           right: 0;
           background-color: #000;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
         }
       }
@@ -159,6 +171,14 @@
         background: black;
         border: none;
       }
+
+      &::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        background: black;
+        border: none;
+      }
+
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         border: none;
@@ -169,7 +189,24 @@
         cursor: pointer;
         position: relative;
         z-index: 1;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+      }
+
+      &::-moz-range-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateX(-50%);
       }
       &:focus {
         outline: none;
@@ -210,7 +247,7 @@
     }
 
     .size-picker__item {
-      margin: 1rem 2rem 1rem 0;
+      margin: 1rem 2rem 0 0;
       position: relative;
 
       .size-picker__label {

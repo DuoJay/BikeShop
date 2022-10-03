@@ -3,8 +3,6 @@ const filterForm = document.querySelector('#filter-form');
 
 filterForm.addEventListener('submit', e => {
   e.preventDefault();
-  const data = new FormData(filterForm);
-  console.log(data);
 });
 
 const getVals = () => {

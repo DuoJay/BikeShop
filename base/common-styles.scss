@@ -54,6 +54,11 @@ a {
   color: map-get($colors, dark);
 }
 
+input,
+select {
+  border-radius: 0%;
+}
+
 .toggle-overflow {
   position: fixed;
   overflow-y: scroll;

@@ -23,6 +23,11 @@ a {
   color: #000;
 }
 
+input,
+select {
+  border-radius: 0%;
+}
+
 .toggle-overflow {
   position: fixed;
   overflow-y: scroll;
@@ -132,6 +137,7 @@ a {
   padding-bottom: 1rem;
 }
 .modal div a {
+  font-family: "Fira Sans", sans-serif;
   font-weight: bold;
 }
 @media (min-width: 920px) {
@@ -646,7 +652,7 @@ a {
 }
 
 .filter-container {
-  padding: 2rem;
+  padding: 0 3rem 3rem 3rem;
   border: 1px solid black;
   background-color: #fbfbfb;
   width: 100%;
@@ -676,21 +682,22 @@ a {
     justify-content: space-between;
   }
 }
-.filter-menu__items .filter-menu__item {
+
+.filter-menu__item {
+  padding-top: 3rem;
   position: relative;
-  padding: 1rem 0 1rem 0;
 }
 
 .brand-select label {
   text-align: center;
 }
 .brand-select select {
+  background-color: #fff;
+  border: 1px solid;
   text-align: center;
   width: 100%;
   height: 5rem;
-  border: 1px solid;
   padding: 1rem 0;
-  background-color: #fff;
 }
 @media (min-width: 1300px) {
   .brand-select {
@@ -748,7 +755,7 @@ a {
 .slider label input {
   text-align: center;
   font-size: 1.6rem;
-  padding: 1rem 0;
+  padding: 0.5rem;
   height: 5rem;
 }
 .slider label input:disabled {
@@ -785,8 +792,11 @@ a {
   -webkit-appearance: none;
   width: 100%;
   position: relative;
+  height: 1px;
   left: 0;
   top: 2.5rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .slider .range-slider input[type=range]:nth-of-type(2) {
@@ -795,21 +805,34 @@ a {
 .slider .range-slider input[type=range]:nth-of-type(2)::before {
   content: "";
   position: absolute;
-  width: 1px;
+  width: 2px;
   height: 25px;
+  top: 0;
+  left: 0;
   background-color: #000;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .slider .range-slider input[type=range]:nth-of-type(2)::after {
   content: "";
   position: absolute;
-  width: 1px;
+  width: 2px;
   height: 25px;
+  top: 0;
   right: 0;
   background-color: #000;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .slider .range-slider input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  background: black;
+  border: none;
+}
+.slider .range-slider input[type=range]::-moz-range-track {
   width: 100%;
   height: 1px;
   background: black;
@@ -825,7 +848,23 @@ a {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.slider .range-slider input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateX(-50%);
 }
 .slider .range-slider input[type=range]:focus {
   outline: none;
@@ -864,7 +903,7 @@ a {
   }
 }
 .size-picker fieldset .size-picker__item {
-  margin: 1rem 2rem 1rem 0;
+  margin: 1rem 2rem 0 0;
   position: relative;
 }
 .size-picker fieldset .size-picker__item .size-picker__label {

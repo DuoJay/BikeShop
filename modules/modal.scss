@@ -58,6 +58,7 @@
     }
 
     a {
+      font-family: map-get($fonts, main);
       font-weight: bold;
     }
   }
