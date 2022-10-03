@@ -25,6 +25,7 @@ a {
 
 input,
 select {
+  -webkit-appearance: none;
   border-radius: 0%;
 }
 
