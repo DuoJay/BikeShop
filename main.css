@@ -25,7 +25,6 @@ a {
 
 input,
 select {
-  -webkit-appearance: none;
   border-radius: 0%;
 }
 
@@ -693,6 +692,7 @@ select {
   text-align: center;
 }
 .brand-select select {
+  color: red;
   background-color: #fff;
   border: 1px solid;
   text-align: center;

@@ -35,7 +35,7 @@
   }
 
   select {
-    color: map-get($colors, primary);
+    color: red;
     background-color: map-get($colors, secondary);
     border: 1px solid map-get($colors, primary);
     text-align: center;
