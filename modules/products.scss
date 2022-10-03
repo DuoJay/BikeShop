@@ -128,6 +128,7 @@
   button {
     font-family: map-get($fonts, main);
     background-color: map-get($colors, main);
+    color: map-get($colors, main);
     font-weight: bold;
     cursor: pointer;
     background: none;

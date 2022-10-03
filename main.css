@@ -1175,6 +1175,7 @@ select {
 .page-select button {
   font-family: "Fira Sans", sans-serif;
   background-color: #262626;
+  color: #262626;
   font-weight: bold;
   cursor: pointer;
   background: none;
