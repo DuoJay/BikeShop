@@ -588,7 +588,7 @@ select {
   height: 50px;
 }
 .compare::before {
-  content: "5"/"";
+  content: "5";
   position: absolute;
   left: 25px;
   top: -5px;
@@ -617,7 +617,7 @@ select {
   height: 50px;
 }
 .cart::before {
-  content: "3"/"";
+  content: "3";
   position: absolute;
   left: 25px;
   top: -5px;
@@ -686,7 +686,7 @@ select {
   padding-bottom: 2rem;
 }
 .toggle-categories button::after {
-  content: "▸"/"";
+  content: "▸";
   display: inline-block;
   font-size: 2.5rem;
   padding: 1rem;
@@ -703,6 +703,7 @@ select {
   -ms-transform: rotate(90deg);
   transform: rotateZ(90deg);
   display: inline-block;
+  padding: 1rem;
 }
 
 .side-nav__items {

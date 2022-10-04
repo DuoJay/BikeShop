@@ -25,7 +25,7 @@
     font-size: 2.5rem;
     padding-bottom: 2rem;
     &::after {
-      content: '▸'/'';
+      content: '▸';
       display: inline-block;
       font-size: 2.5rem;
       padding: 1rem;
@@ -42,6 +42,7 @@
     content: '▸';
     @include rotateZ(90deg);
     display: inline-block;
+    padding: 1rem;
   }
 }
 
