@@ -4,26 +4,21 @@ const backdrop = document.querySelector('.backdrop');
 const loginModal = document.querySelector('.modal');
 const loginBtn = document.querySelector('.login');
 
-// COMMON FUNCTIONS
-const toggleOverflow = () => {
-  document.body.classList.toggle('toggle-overflow');
-};
-
-const toggleMobileNav = () => {
-  mobileNav.classList.toggle('open-nav');
-  navButton.classList.toggle('active');
-  navButton.classList.toggle('origin');
-};
-// END OF COMMON FUNCTIONS
-
 // LOAD PRODUCTS ON PAGE
-const fetchProducts = async url => {
-  const { data } = await axios.get(url);
-  return data;
+const fetchProducts = url => {
+  const response = axios.get(url);
+  return response;
 };
 
-const showProduts = async () => {
-  const { bikes } = await fetchProducts('products.json');
+const printProducts = ({ data }) => {
+  return Promise.resolve(data);
+};
+
+const showProdutcs = async () => {
+  const { bikes } = await fetchProducts('products.json')
+    .then(printProducts)
+    .catch(err => console.log('STALA SE CHYBA!', err));
+
   const productsContainer = document.querySelector('.products');
 
   bikes.forEach(bike => {
@@ -52,10 +47,20 @@ const showProduts = async () => {
   });
 };
 
-showProduts();
+showProdutcs();
 
 // ENDO OF LOAD PRODUCTS
+// COMMON FUNCTIONS
+const toggleOverflow = () => {
+  document.body.classList.toggle('toggle-overflow');
+};
 
+const toggleMobileNav = () => {
+  mobileNav.classList.toggle('open-nav');
+  navButton.classList.toggle('active');
+  navButton.classList.toggle('origin');
+};
+// END OF COMMON FUNCTIONS
 // TOGGLE MODAL
 const openModal = () => {
   backdrop.style.display = 'initial';
@@ -86,7 +91,7 @@ backdrop.addEventListener('click', () => {
 });
 
 // END OF TOGGLE MODAL
-// SHOW CATEGORIES
+// SHOW CATEGORIES AT SIDE BAR
 const showCategories = () => {
   const ctgBtn = document.querySelector('#show-categories');
   const categories = document.querySelector('.side-nav__items');
@@ -100,13 +105,12 @@ const showCategories = () => {
 
 showCategories();
 
-// END OF SHOW CATEGORIES
+// END OF SHOW CATEGORIES AT SIDE BAR
 // TOGGLE MOBILE NAV BAR
 navButton.addEventListener('click', () => {
   toggleOverflow();
   toggleMobileNav();
 });
-
 // END OF TOGGLE MOBILE NAV BAR
 // JUMP UP BUTTON FOR MOBILES
 const jumpUp = document.querySelector('.jump-up');

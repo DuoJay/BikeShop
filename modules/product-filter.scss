@@ -113,7 +113,9 @@
         -webkit-appearance: none;
         margin: 0;
       }
-
+      @media (max-width: 330px) {
+        width: 80%;
+      }
       @include filterAtLarge {
         width: 100px;
       }
@@ -128,6 +130,7 @@
 
   .max-value {
     @include filterAtLarge {
+      padding-left: 1rem;
       order: 3;
     }
   }

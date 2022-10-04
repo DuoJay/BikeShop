@@ -67,6 +67,8 @@ select {
   width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: opacity 500ms linear;
+  -o-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
 @media (min-width: 920px) {
@@ -102,7 +104,11 @@ select {
   padding: 2rem;
   padding-bottom: 3rem;
   font-size: 1.4rem;
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s linear, -webkit-transform 0.3s ease-in;
+  -o-transition: opacity 0.3s linear, transform 0.3s ease-in;
   transition: opacity 0.3s linear, transform 0.3s ease-in;
+  transition: opacity 0.3s linear, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 .modal input {
   font-family: "Fira Sans", sans-serif;
@@ -141,10 +147,12 @@ select {
 }
 @media (min-width: 920px) {
   .modal {
+    -webkit-transform: translate(20px, calc(-100% - 5rem));
+    -ms-transform: translate(20px, calc(-100% - 5rem));
+    transform: translate(20px, calc(-100% - 5rem));
     width: 250px;
     top: 4.5rem;
     right: 15vw;
-    transform: translate(20px, calc(-100% - 5rem));
   }
 }
 
@@ -309,20 +317,24 @@ select {
   }
 }
 .main-header {
+  background-color: #262626;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
   position: fixed;
   top: 10rem;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #262626;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
   padding: 1.4rem 0;
   z-index: 100;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  -o-transition: transform 0.1s ease-in;
   transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
 }
 .main-header nav {
   display: -webkit-box;
@@ -420,12 +432,12 @@ select {
   margin: auto 0;
 }
 .login button {
+  cursor: pointer;
   color: #fff;
   font-family: "Roboto", sans-serif;
   background: none;
   font-size: 1.4rem;
   border: none;
-  cursor: pointer;
 }
 
 .nav-line {
@@ -706,9 +718,9 @@ select {
   }
 }
 .side-nav__items li {
+  cursor: pointer;
   padding-bottom: 1.5rem;
   font-weight: bold;
-  cursor: pointer;
 }
 .side-nav__items li::before {
   content: "▸ ";
@@ -943,6 +955,11 @@ select {
   -webkit-appearance: none;
   margin: 0;
 }
+@media (max-width: 330px) {
+  .slider label input {
+    width: 80%;
+  }
+}
 @media (min-width: 1300px) {
   .slider label input {
     width: 100px;
@@ -955,6 +972,7 @@ select {
 }
 @media (min-width: 1300px) {
   .slider .max-value {
+    padding-left: 1rem;
     order: 3;
   }
 }

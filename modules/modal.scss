@@ -8,6 +8,8 @@
   width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: opacity 500ms linear;
+  -o-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 
   @include atMedium {
@@ -34,7 +36,12 @@
   padding: 2rem;
   padding-bottom: 3rem;
   font-size: 1.4rem;
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s linear, -webkit-transform 0.3s ease-in;
+  -o-transition: opacity 0.3s linear, transform 0.3s ease-in;
   transition: opacity 0.3s linear, transform 0.3s ease-in;
+  transition: opacity 0.3s linear, transform 0.3s ease-in,
+    -webkit-transform 0.3s ease-in;
 
   input {
     font-family: map-get($fonts, main);
@@ -65,10 +72,10 @@
   }
 
   @include atMedium {
+    @include translate(20px, calc(-100% - 5rem));
     width: 250px;
     top: 4.5rem;
     right: calc((100vw - map-get($width, desktop)) / 2);
-    transform: translate(20px, calc(-100% - 5rem));
   }
 }
 
