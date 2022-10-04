@@ -1,35 +1,3 @@
-@mixin atSmall {
-  @media (min-width: 640px) {
-    @content;
-  }
-}
-
-@mixin atMedium {
-  @media (min-width: 920px) {
-    @content;
-  }
-}
-
-@mixin atLarge {
-  @media (min-width: 1008px) {
-    @content;
-  }
-}
-
-// TO FIX THE ELEMENTS LAYOUT IN FILTER CONTAINER
-@mixin filterAtLarge {
-  @media (min-width: 1300px) {
-    @content;
-  }
-}
-
-@mixin display-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -78,10 +46,14 @@ select {
   border: none;
 
   &:hover {
+    -webkit-transform: scale(102%);
+    -ms-transform: scale(102%);
     transform: scale(102%);
   }
 
   &:active {
+    -webkit-transform: scale(100%);
+    -ms-transform: scale(100%);
     transform: scale(100%);
   }
 }

@@ -1,7 +1,7 @@
 .filter-container {
+  background-color: map-get($colors, light);
   padding: 0 3rem 3rem 3rem;
   border: 1px solid black;
-  background-color: map-get($colors, light);
   width: 100%;
   h2 {
     text-align: center;
@@ -14,12 +14,12 @@
 
 .filter-menu__items {
   @include display-flex();
-  flex-direction: column;
-  justify-content: center;
+  @include flex-column;
+  @include justify-center;
   @include filterAtLarge {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flex-row;
+    @include justify-space-between;
+    @include flex-wrap-wrap;
   }
 }
 
@@ -35,9 +35,9 @@
   }
 
   select {
-    color: #262626;
+    color: map-get($colors, main);
     background-color: map-get($colors, secondary);
-    border: 1px solid map-get($colors, primary);
+    border: 1px solid map-get($colors, main);
     text-align: center;
     width: 100%;
     height: 5rem;
@@ -45,7 +45,7 @@
   }
 
   @include filterAtLarge {
-    flex-basis: 20%;
+    @include flex-basis(20%);
   }
 }
 
@@ -55,28 +55,27 @@
 .slider {
   .range-slider-box {
     @include display-flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include justify-center;
+    @include flex-wrap-wrap;
     @include filterAtLarge {
-      justify-content: flex-end;
-      flex-wrap: nowrap;
+      @include justify-flex-end;
+      @include flex-wrap-nowrap;
     }
   }
 
   .range-slider-values {
-    @include display-flex();
-    flex-direction: column;
-    align-items: center;
-
+    @include display-flex;
+    @include flex-column;
+    @include align-center;
     @include filterAtLarge {
-      justify-content: space-evenly;
+      @include justify-space-evenly;
     }
   }
 
   label {
-    @include display-flex();
+    @include display-flex;
+    @include justify-center;
     margin-bottom: 1rem;
-    justify-content: center;
 
     span {
       height: 5rem;
@@ -92,9 +91,9 @@
     input {
       -moz-appearance: textfield;
       -webkit-appearance: none;
-      color: #262626;
-      background-color: #fff;
-      border: 1px solid #262626;
+      color: map-get($colors, main);
+      background-color: map-get($colors, secondary);
+      border: 1px solid map-get($colors, main);
       text-align: center;
       font-size: 1.6rem;
       padding: 0.5rem;
@@ -102,11 +101,11 @@
 
       &:disabled {
         -moz-appearance: textfield;
-        -webkit-text-fill-color: #262626;
+        -webkit-text-fill-color: map-get($colors, main);
+        color: map-get($colors, main);
         opacity: 1;
-        color: #262626;
         background-color: white;
-        border: 1px solid #262626;
+        border: 1px solid map-get($colors, main);
       }
 
       &::-webkit-outer-spin-button,
@@ -137,7 +136,7 @@
     position: relative;
     width: 100%;
     @include filterAtLarge {
-      transform: translateY(-10%);
+      @include translateY(-10%);
       order: 2;
     }
 
@@ -146,11 +145,9 @@
       width: 100%;
       position: relative;
       height: 1px;
-      left: 0;
+      left: 10px;
       top: 2.5rem;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include translateY(-50%);
       &:nth-of-type(2) {
         top: 1.3rem !important;
 
@@ -162,9 +159,7 @@
           top: 0;
           left: 0;
           background-color: #000;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          @include translateY(-50%);
         }
 
         &::after {
@@ -175,9 +170,7 @@
           top: 0;
           right: 0;
           background-color: #000;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          @include translateY(-50%);
         }
       }
 
@@ -234,7 +227,7 @@
   }
 
   @include filterAtLarge {
-    flex-basis: 75%;
+    @include flex-basis(75%);
   }
 }
 
@@ -243,13 +236,13 @@
 
 .size-picker {
   fieldset {
+    @include display-flex;
+    @include flex-wrap-wrap;
+    @include justify-center;
     margin-top: 1rem;
     border: none;
-    @include display-flex();
-    flex-wrap: wrap;
-    justify-content: center;
     @media (min-width: 82rem) {
-      justify-content: flex-start;
+      @include justify-flex-start;
     }
 
     legend {
@@ -267,17 +260,17 @@
       position: relative;
 
       .size-picker__label {
+        cursor: pointer;
         font-weight: bold;
         position: relative;
         padding-left: 23px;
-        cursor: pointer;
         font-size: 1.6rem;
       }
 
       input {
+        cursor: pointer;
         position: absolute;
         opacity: 0;
-        cursor: pointer;
         height: 0;
         width: 0;
 
@@ -298,6 +291,8 @@
         &::after {
           content: url(images/icons/check.svg);
           opacity: 0;
+          -webkit-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
           transition: all 0.2s linear;
         }
       }
@@ -311,8 +306,8 @@
 #filter-btn {
   width: 100%;
   @include filterAtLarge {
-    width: 12.8rem;
     position: absolute;
+    width: 12.8rem;
     bottom: 0;
     right: 0;
   }

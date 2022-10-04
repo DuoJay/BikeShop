@@ -3,14 +3,14 @@
   padding-bottom: 40px;
 
   @include atLarge {
-    @include display-flex();
-    align-items: flex-start;
-    flex-basis: 300px;
+    @include display-flex;
+    @include align-flex-start;
+    @include flex-basis(300px);
     position: relative;
     width: 20rem;
     background: none;
     top: 0;
-    transform: translateX(0);
+    @include translateX(0);
   }
 }
 
@@ -18,16 +18,17 @@
   text-align: center;
   height: 50px;
   button {
+    color: map-get($colors, main);
+    font-family: map-get($fonts, main);
     background: none;
     border: none;
     font-size: 2.5rem;
     padding-bottom: 2rem;
-    font-family: map-get($fonts, main);
-    color: map-get($colors, main);
     &::after {
       content: '▸'/'';
       display: inline-block;
       font-size: 2.5rem;
+      padding: 1rem;
     }
   }
   padding-bottom: 20px;
@@ -39,8 +40,8 @@
 .rotate-arrow {
   &::after {
     content: '▸';
+    @include rotateZ(90deg);
     display: inline-block;
-    transform: rotateZ(90deg);
   }
 }
 

@@ -1,0 +1,65 @@
+// FLEXBOX
+
+// DISPLAY FLEX
+@include display-flex;
+
+// FLEX WRAP NOWRAP
+@include flex-wrap-nowrap;
+
+// FLEX WRAP WRAP
+@include flex-wrap-wrap;
+
+// FLEX DIRECTION ROW
+@include flex-row;
+
+// FLEX DIRECTION COLUMN
+@include flex-column;
+
+// FLEX DIRECTION ROW REVERSE
+@include row-reverse;
+
+// JSUTIFY CONTENT CENTER
+@include justify-center;
+
+// JUSTIFY CONTENT SPACE BETWEEN
+@include justify-space-between;
+
+// JUSTIFY CONTENT SPACE AROUND
+@include justify-space-around;
+
+// JUSTIFY CONTENT SPACE EVENLY
+@include justify-space-evenly;
+
+// JUSTIFY CONTENT FLEX START
+@include justify-flex-start;
+
+// JUSTIFY CONTENT FLEX END
+@include justify-flex-end;
+
+// ALIGN ITEMS CENTER
+@include align-center;
+
+// ALIGN ITEMS CENTER
+@include align-flex-start;
+
+// ALIGN ITEMS FLEX END
+@include align-flex-end;
+
+// ALIGN SELF FLEX END
+@include flex-self-end;
+
+// FLEX BASIS
+@include flex-basis();
+
+// TRANSFORM
+// TRANSLATE X AND Y
+@include translate();
+
+// TRANSLATEX
+@include translateX();
+
+// TRANSLATEX
+@include translateY();
+
+// ROTATEZ
+@include rotateZ();

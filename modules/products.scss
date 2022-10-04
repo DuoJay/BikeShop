@@ -1,26 +1,29 @@
 .products {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 1rem;
   margin-top: 4rem;
   margin-bottom: 1rem;
   padding-bottom: 5rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  grid-gap: 1rem;
   border-bottom: 2px solid #707070;
 }
 
 .product-container {
+  @include display-flex;
+  @include flex-column;
+  @include justify-space-between;
+  @include align-center;
   position: relative;
   width: 240px;
   height: 350px;
-  @include display-flex();
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   margin: auto;
   padding: 0.5rem;
   margin-top: 1rem;
   border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-transition: border 0.3s linear;
+  -o-transition: border 0.3s linear;
   transition: border 0.3s linear;
 
   &:hover {
@@ -29,10 +32,10 @@
 }
 
 .badge-container {
+  @include display-flex;
+  @include flex-column;
+  @include justify-flex-start;
   position: absolute;
-  @include display-flex();
-  flex-direction: column;
-  justify-content: flex-start;
   top: 1rem;
   left: -0.5rem;
   width: 8rem;
@@ -40,9 +43,9 @@
 }
 
 @mixin badge {
+  color: map-get($colors, secondary);
   font-size: 1.4rem;
   text-align: center;
-  color: map-get($colors, secondary);
   height: 2rem;
   line-height: 2rem;
   margin-bottom: 1rem;
@@ -79,32 +82,32 @@
 }
 
 .product-line {
+  background-color: #000;
   position: absolute;
   bottom: 45px;
   width: 220px;
   height: 1px;
-  background-color: #000;
   margin: 2rem auto;
 }
 
 .product-cta {
-  @include display-flex();
-  justify-content: space-between;
-  align-items: center;
+  @include display-flex;
+  @include justify-space-between;
+  @include align-center;
   width: 100%;
   span {
+    color: map-get($colors, price);
     font-size: 2.2rem;
     font-weight: bold;
-    color: map-get($colors, price);
   }
 }
 
 .page-select {
-  @include display-flex();
-  align-self: flex-end;
+  @include display-flex;
+  @include flex-self-end;
 
   ol {
-    @include display-flex();
+    @include display-flex;
     li {
       cursor: pointer;
       width: 20px;
@@ -114,6 +117,8 @@
       padding: 1px;
       margin: 2px;
       border: 1px solid rgba(0, 0, 0, 0);
+      -webkit-transition: border 0.2s ease-out;
+      -o-transition: border 0.2s ease-out;
       transition: border 0.2s ease-out;
       &:hover,
       &:active {
@@ -129,9 +134,9 @@
     font-family: map-get($fonts, main);
     background-color: map-get($colors, main);
     color: map-get($colors, main);
-    font-weight: bold;
     cursor: pointer;
     background: none;
+    font-weight: bold;
     border: none;
   }
 }

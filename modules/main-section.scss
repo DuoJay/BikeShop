@@ -1,9 +1,8 @@
 .main-section {
+  @include display-flex;
+  @include justify-center;
   color: map-get($colors, main);
   font-family: map-get($fonts, main);
-  width: map-get($width, mobile);
-  @include display-flex();
-  justify-content: center;
   padding-top: 5rem;
   width: auto;
   @include atMedium {
@@ -13,9 +12,9 @@
 // MAIN CONTENT GENERAL STYLES
 
 .main-section-container {
-  @include display-flex();
-  flex-direction: column;
-  justify-content: space-between;
+  @include display-flex;
+  @include flex-column;
+  @include justify-space-between;
   width: map-get($width, mobile);
   @include atLarge {
     width: map-get($width, desktop);
@@ -24,11 +23,11 @@
 }
 
 .content-container {
-  @include display-flex();
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 100%;
+  @include display-flex;
+  @include flex-column;
+  @include justify-center;
+  @include align-center;
+  @include flex-basis(100%);
   h1 {
     width: 100%;
     font-size: 3.2rem;

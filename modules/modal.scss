@@ -1,7 +1,7 @@
 .backdrop {
   display: none;
-  opacity: 0;
   position: fixed;
+  opacity: 0;
   top: 0;
   left: 0;
   z-index: 150;
@@ -16,19 +16,20 @@
 }
 
 .modal {
+  // DISPLAY: FLEX ADDED VIA JS
+  @include flex-column;
+  @include align-center;
+  @include justify-space-between;
+  @include translate(50%, -50%);
+  background-color: map-get($colors, secondary);
   display: none;
-  opacity: 0;
   position: fixed;
+  opacity: 0;
   width: 70%;
   height: 300px;
-  background-color: map-get($colors, secondary);
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%);
   z-index: 150;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   border: 1px solid map-get($colors, main);
   padding: 2rem;
   padding-bottom: 3rem;
@@ -36,10 +37,10 @@
   transition: opacity 0.3s linear, transform 0.3s ease-in;
 
   input {
-    width: 100%;
-    padding: 1rem;
     font-family: map-get($fonts, main);
     border: 1px solid map-get($colors, main);
+    width: 100%;
+    padding: 1rem;
     font-size: 1.4rem;
   }
 
@@ -47,10 +48,10 @@
     width: 100%;
   }
   div {
-    @include display-flex();
-    flex-direction: column;
-    align-items: center;
-    justify-content: space;
+    @include display-flex;
+    @include flex-column;
+    @include justify-space-between;
+    @include align-center;
     span {
       color: map-get($colors, main);
       font-family: map-get($fonts, sans);
@@ -72,9 +73,9 @@
 }
 
 .open-modal {
-  @include display-flex();
+  @include display-flex;
   opacity: 1;
   @include atMedium {
-    transform: translate(20px, 0);
+    @include translate(20px, 0);
   }
 }

@@ -1,8 +1,14 @@
+// PREFIXES
+@import 'prefixes/flexbox.scss';
+@import 'prefixes/transform.scss';
+
+// BASE
 @import 'base/typography.scss';
 @import 'base/_variables.scss';
+@import 'base/media.scss';
 @import 'base/common-styles.scss';
 
-// BEM Blocks
+// BEM Blocks (modules)
 @import 'modules/modal.scss';
 @import 'modules/burger.scss';
 @import 'modules/main-header.scss';

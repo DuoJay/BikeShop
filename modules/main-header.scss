@@ -11,13 +11,13 @@
   z-index: 100;
 
   nav {
-    @include display-flex();
+    @include display-flex;
+    @include flex-column;
     width: map-get($width, mobile);
-    flex-direction: column;
     padding: 2rem 4rem;
     @include atMedium {
-      flex-direction: row-reverse;
-      justify-content: space-between;
+      @include row-reverse;
+      @include justify-space-between;
       padding: 0;
     }
     @include atLarge {
@@ -35,20 +35,20 @@
     padding: 2rem 2rem 2rem 0;
   }
 
-  transform: translateX(100%);
+  @include translateX(100%);
   transition: transform 0.1s ease-in;
 
   @include atMedium {
+    @include display-flex;
+    @include justify-center;
+    @include align-center;
     position: sticky;
     top: 0;
     height: 50px;
-    @include display-flex();
-    justify-content: center;
-    align-items: center;
-    transform: translateX(0%);
+    @include translateX(0%);
 
     .main-nav__items {
-      @include display-flex();
+      @include display-flex;
     }
 
     .nav-line {
@@ -58,12 +58,12 @@
 }
 
 .open-nav {
-  transform: translateX(0%);
+  @include translateX(0%);
 }
 
 .center-icon {
-  @include display-flex();
-  align-items: center;
+  @include display-flex;
+  @include align-center;
 
   .icon {
     height: 1.4rem;
@@ -81,9 +81,9 @@
   margin: auto 0;
   button {
     color: map-get($colors, secondary);
+    font-family: map-get($fonts, secondary);
     background: none;
-    font-family: inherit;
-    font-size: inherit;
+    font-size: 1.4rem;
     border: none;
     cursor: pointer;
     @extend .center-icon;
@@ -95,8 +95,8 @@
 }
 
 .nav-line {
+  background-color: map-get($colors, secondary);
   height: 1px;
   width: 100%;
-  background-color: map-get($colors, secondary);
   margin: 2rem 0 2rem 0;
 }

@@ -5,6 +5,8 @@
   bottom: 10px;
   font-size: 3rem;
   opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
   @media (min-width: 50rem) {
     font-size: 5rem;
